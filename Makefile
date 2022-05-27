@@ -6,6 +6,7 @@ setup:
 	docker-compose exec myapp bash -c 'bundle exec rails webpacker:install'
 	docker-compose exec myapp bash -c 'bundle exec rails tailwindcss:install'
 	docker-compose exec myapp bash -c 'bundle exec rails db:migrate'
+	docker-compose exec myapp bash -c 'bundle exec rails db:seed'
 
 start:
 	docker-compose exec myapp bash -c 'bundle exec rails server -b 0.0.0.0'
